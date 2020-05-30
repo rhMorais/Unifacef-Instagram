@@ -1,0 +1,50 @@
+{
+  "feed": [
+    {
+      "id": 1,
+      "image": "https://i.pinimg.com/originals/26/ea/fc/26eafc0b14488fea03fa8fa9751203ff.jpg",
+      "description": "Are you working for your dreams?",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "image": "https://s2.glbimg.com/9DtSY6ZLYx173tSW9KZiNcoIbDQ=/620x430/e.glbimg.com/og/ed/f/original/2019/02/15/gettyimages-8454560281.jpg",
+      "description": "Que linda cidade",
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "image": "https://ideiasradicais.com.br/wp-content/uploads/2019/08/1-shutterstock_112003280.jpg",
+      "description": "Saudades do que ainda não vivemos",
+      "authorId": 3
+    },
+    {
+      "id": 4,
+      "image": "https://archtrends.com/blog/wp-content/uploads/2019/08/original-ce186474b21e0f7a1123c4d8be4d901e-650x590.jpg",
+      "description": "Are you working for your dreams?",
+      "authorId": 4
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "jr_acn",
+      "avatar": "https://avatars0.githubusercontent.com/u/6952134?s=50"
+    },
+    {
+      "id": 2,
+      "name": "RocketSeat",
+      "avatar": "https://avatars0.githubusercontent.com/u/2254731?s=50"
+    },
+    {
+      "id": 3,
+      "name": "Andre",
+      "avatar": "https://avatars0.githubusercontent.com/u/30246642?s=50"
+    },
+    {
+      "id": 4,
+      "name": "Mateus",
+      "avatar": "https://avatars0.githubusercontent.com/u/2117212?s=50"
+    }
+  ]
+}
