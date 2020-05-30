@@ -1,31 +1,47 @@
-// import { action, observable } from 'mobx';
-import axios from 'axios';
+import {action, observable} from 'mobx';
 
-type Post = {
-  id: number;
-  image: string;
-  description: string;
-  authorId: number;
-  author: {
-    id: number;
-    name: string;
-    avatar: string;
-  };
-};
+import {Post, getPosts} from '../apis/posts.api';
 
 export default class HomeStore {
+  @observable photoReady: boolean = false;
+
   @observable posts: Post[] = [];
 
+  @observable loading: boolean = false;
+
   @action getPosts = async () => {
+    this.loading = true;
     try {
-      const {data: posts} = await axios.get<[Post]>(
-        'http://localhost:3000/feed?_expand=author',
-      );
+      const posts = await getPosts();
       this.posts = posts;
-    } catch (error) {
-      console.log(error);
+      console.log('success');
+    } catch (err) {
+      console.log(err);
       this.posts = [];
+      throw err;
+    } finally {
+      this.loading = false;
     }
+  };
+
+  @action addPost = (uriPhoto: string) => {
+    const post: Post = {
+      author: {
+        id: 5,
+        name: 'rafael_morais',
+        avatar: 'https://avatars0.githubusercontent.com/u/30928122?s=50',
+      },
+      authorId: 5,
+      description: 'sem legenda',
+      id: this.posts.length + 1,
+      image: uriPhoto,
+    };
+
+    this.posts.unshift(post);
+  };
+
+  @action toogleStatus = (status: boolean) => {
+    this.photoReady = status;
   };
 }
 
